@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positive Technologies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <menu>
+      <a href="index.html"><img src="logo.png" class="logo" height="40" width="160"></a><a href="index.html">о компании</a><a href="finance.html" style="color: red">основные финансовые показатели</a>
+        <a href="contacts.html">Контактные данные</a><a href="video.html">видео</a>
+    </menu>
+<hr>
+</header>
+<main>
+  <!-- Показатели -->
+<div class="trading">
+  <div class="tradingVolume">Капитализация на конец апреля: <span>112 807 200 000 ₽</span></div><br>
+    <div class="tradingVolume">Общее число акций (депозитарных расписок), обращающихся на Московской фондовой бирже: <span>66 000 000</span></div><br>
+    <div class="tradingVolume">Максимальная цена: <span id="max-price"></span></div><br>
+    <div class="tradingVolume">Минимальная цена: <span id="min-price"></span></div><br>
+    <div class="tradingVolume">Среднеквадратическое отклонение цены: <span id="std-dev"></span></div><br>
+  </div>
+  
+  <!-- Таблица с ценами акций в апреле -->
+    <table>
+      <tr>
+        <th>Дата</th>
+        <th>Цена закрытия</th>
+      </tr>
+      <tr>
+        <td>3 апреля</td>
+        <td>1 739 руб.</td>
+      </tr>
+      <tr>
+        <td>4 апреля</td>
+        <td>1 725,4 руб.</td>
+      </tr>
+      <tr>
+        <td>5 апреля</td>
+        <td>1 729,4 руб.</td>
+      </tr>
+      <tr>
+        <td>6 апреля</td>
+        <td>1 737 руб.</td>
+      </tr>
+      <tr>
+        <td>7 апреля</td>
+        <td>1 704,8 руб.</td>
+      </tr>
+      <tr>
+        <td>10 апреля</td>
+        <td>1 718,6 руб.</td>
+      </tr>
+      <tr>
+        <td>11 апреля</td>
+        <td>1 720,8 руб.</td>
+      </tr>
+      <tr>
+        <td>12 апреля</td>
+        <td>1 728 руб.</td>
+      </tr>
+      <tr>
+        <td>13 апреля</td>
+        <td>1 709,6 руб.</td>
+      </tr>
+      <tr>
+        <td>14 апреля</td>
+        <td>1 710,6 руб.</td>
+      </tr>
+      <tr>
+        <td>17 апреля</td>
+        <td>1 710,8 руб.</td>
+      </tr>
+      <tr>
+        <td>18 апреля</td>
+        <td>1 704,4 руб.</td>
+      </tr>
+      <tr>
+        <td>19 апреля</td>
+        <td>1 705 руб.</td>
+      </tr>
+      <tr>
+        <td>20 апреля</td>
+        <td>1 701,8 руб.</td>
+      </tr>
+      <tr>
+        <td>21 апреля</td>
+        <td>1 698 руб.</td>
+        <tr>
+        <td>24 апреля</td>
+        <td>1 704 руб.</td>
+      </tr>
+      <tr>
+        <td>25 апреля</td>
+        <td>1 712 руб.</td>
+      </tr>
+      <tr>
+        <td>26 апреля</td>
+        <td>1 719 руб.</td>
+      </tr>
+      <tr>
+        <td>27 апреля</td>
+        <td>1 716 руб.</td>
+      </tr>
+      
+      <tr class="highlight">
+        <td>28 апреля</td>
+        <td>1 715,4 руб.</td>
+      </tr>
+  </table>
+</main>
+<script>
+  // данные о ценах закрытия за апрель
+  const prices = [1739, 1725.4, 1729.4, 1737, 1704.8, 1718.6, 1720.8, 1728, 1709.6, 1710.6, 1710.8, 1704.4, 1705, 1701.8, 1698, 1704, 1712, 1719, 1716, 1715.4]
+
+  // находим максимальную и минимальную цены из массива prices
+  const maxPrice = Math.max(...prices);
+  const minPrice = Math.min(...prices);
+  
+  // выводим результаты на страницу по поиску id
+  document.getElementById('max-price').textContent = maxPrice + ' руб.';
+  document.getElementById('min-price').textContent = minPrice + ' руб.';
+  
+  // находим среднеквадратическое отклонение цен.
+  const mean = prices.reduce((acc, val) => acc + val) / prices.length;
+  const variance = prices.reduce((acc, val) => acc + (val - mean) ** 2, 0) / prices.length;
+  const stdDev = Math.sqrt(variance);
+  
+  // выводим результат на страницу
+  document.getElementById('std-dev').textContent = stdDev.toFixed(2) + ' руб.';
+</script>
+<footer>
+  <hr>
+  <a href="https://www.ptsecurity.com/ru-ru/"><img src="logo.png" class="logof" height="40" width="160"></a>
+  <a href="https://github.com/pereladova/posi.git"  class="footer">Ссылка на GitHub</a>
+</footer>
+</body>
+</html>
