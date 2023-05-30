@@ -1,0 +1,138 @@
+a {
+    color: black;
+    margin-right: 50px;
+    font-weight: bold;
+    position: relative;
+    font-size: 16pt;
+    text-decoration: none;
+  }
+  a:hover {
+    color: darkgray;
+    text-decoration: none;
+  }
+  menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 0;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    background-color: white;
+    z-index: 1;
+  }
+  
+  .logo {
+    padding-top: 10px;
+  }
+  div {text-align: justify;}
+  body{
+    border-collapse: separate;
+    text-indent: initial;
+    font-size: 14pt;
+    font-family: monospace;
+    padding-top: 60px;
+  }
+  main {
+    margin-left: 40px;
+  }
+  .screen1 {
+    width: 45%;
+    padding: 13px;
+    display: inline-block;
+    margin-bottom: 15px;
+  }
+  li {
+    list-style-type: square;
+    color: red;
+  }
+  li span {
+    color: black;
+  }
+  span {
+    color: red;
+  }
+  h2 {
+    color: red;
+  }
+  .photo {
+    width: 500px;
+    float: right;
+    margin-right: 10%;
+    padding: 50px;
+  }
+  
+  #ph {
+    display: inline-block;
+  }
+  
+  .video {
+    width: 860px;
+    height: 540px;
+  }
+  .vid {
+    text-align: center;
+  }
+  .timing {
+    width: 30%;
+    border-left: 1px solid;
+    margin-right: 10%;
+    display: inline-block;
+  }
+  table{
+    float: inline-start;
+    border-collapse: collapse;
+    margin-top: 20px;
+    width: 50%;
+    margin-left: 40px;
+  }
+  th, td {
+    border: 1px solid #ccc;
+    padding: 5px;
+  }
+  th {
+    background-color: #eee;
+  }
+  .highlight {
+    background-color: red;
+  }
+  .tradingVolume {
+      float: right;
+      width: 500px;
+     box-sizing: border-box;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      padding-right: 10px;
+      padding-left: 10px;
+      margin-left: 21px;
+      margin-right: 40px;
+      margin-bottom: 16px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background-color: rgb(251, 133, 133);
+     position: relative;
+  }
+  .trading {
+    width: 300px;
+    float: right;
+    opacity: 0.8;
+  }
+  .img {
+    width: 400px;
+    float: right;
+    margin-right: 40px;
+    margin-top: 40px;
+  }
+  .contact {
+    padding-left: 300px;
+    padding-right: 300px;
+  
+  }
+
+  footer {
+    height: 40px;
+    text-align: center;
+    padding-bottom: 40px;
+  }
